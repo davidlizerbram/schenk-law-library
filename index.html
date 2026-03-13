@@ -20,24 +20,34 @@
       flex-direction: column;
     }
 
+    /* Vignette */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
     /* Header */
     .header {
-      padding: 48px 64px 32px;
+      padding: 56px 64px 36px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 14px;
     }
 
     .teal-rule-top {
-      width: 120px;
+      width: 100px;
       border: none;
       height: 1px;
       background-color: #427284;
     }
 
     .header img {
-      width: 72px;
+      width: 84px;
       height: auto;
     }
 
@@ -45,7 +55,7 @@
       font-family: Georgia, 'Times New Roman', serif;
       font-weight: 100;
       font-size: 2rem;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #ffffff;
     }
@@ -53,54 +63,79 @@
     /* Main content */
     .content {
       flex: 1;
-      padding: 56px 64px;
+      padding: 48px 64px 64px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      max-width: 900px;
+      gap: 26px;
+      max-width: 880px;
       margin: 0 auto;
       width: 100%;
+    }
+
+    /* Entrance animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .topic-card {
       display: block;
       text-align: center;
-      background-color: #151515;
-      border-top: 2px solid #427284;
-      border-bottom: 2px solid #427284;
-      border-left: none;
-      border-right: none;
-      padding: 44px 40px;
+      background-color: #131313;
+      border: 1.5px solid #427284;
+      border-radius: 3px;
+      padding: 50px 40px;
       text-decoration: none;
-      color: #ffffff;
+      color: #f0f0f0;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
     }
 
+    .topic-card:nth-child(1) { animation-delay: 0.1s; }
+    .topic-card:nth-child(2) { animation-delay: 0.25s; }
+    .topic-card:nth-child(3) { animation-delay: 0.4s; }
+
     .topic-card:hover {
-      background-color: #1c1c1c;
+      background-color: #1a1a1a;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 12px rgba(66, 114, 132, 0.08);
     }
 
     .topic-card span.label {
       font-family: Georgia, 'Times New Roman', serif;
       font-weight: 400;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
     }
 
     /* Footer */
     .footer-rule {
-      margin: 0 64px;
+      max-width: 880px;
+      margin: 0 auto;
+      width: calc(100% - 128px);
       border: none;
       height: 1px;
       background-color: #427284;
     }
 
     .footer {
-      padding: 32px 64px 48px;
+      max-width: 880px;
+      margin: 0 auto;
+      width: calc(100% - 128px);
+      padding: 28px 0 56px;
       font-family: Calibri, Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #F8F7F5;
-      line-height: 1.8;
+      line-height: 2;
+      text-align: center;
     }
 
     .footer a {
@@ -116,39 +151,46 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      body::before {
+        background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+      }
+
       .header {
-        padding: 32px 24px 24px;
-        gap: 16px;
+        padding: 40px 20px 28px;
+        gap: 12px;
       }
 
       .header img {
-        width: 52px;
+        width: 64px;
       }
 
       .header h1 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         letter-spacing: 0.1em;
       }
 
-      .footer-rule {
-        margin: 0 24px;
-      }
-
       .content {
-        padding: 32px 24px;
+        padding: 32px 16px 48px;
+        gap: 22px;
       }
 
       .topic-card {
-        padding: 36px 28px;
+        padding: 40px 20px;
       }
 
       .topic-card span.label {
-        font-size: 1rem;
+        font-size: 1.05rem;
         letter-spacing: 0.18em;
       }
 
+      .footer-rule {
+        width: calc(100% - 32px);
+      }
+
       .footer {
-        padding: 24px 24px 36px;
+        width: calc(100% - 32px);
+        padding: 24px 0 40px;
+        font-size: 0.9rem;
       }
     }
   </style>
