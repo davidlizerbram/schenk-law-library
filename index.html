@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Schenk Law Library</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Georgia, 'Times New Roman', serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      padding: 48px 64px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .teal-rule-top {
+      width: 120px;
+      border: none;
+      height: 1px;
+      background-color: #427284;
+    }
+
+    .header img {
+      width: 72px;
+      height: auto;
+    }
+
+    .header h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 100;
+      font-size: 2rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    /* Main content */
+    .content {
+      flex: 1;
+      padding: 56px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .topic-card {
+      display: block;
+      text-align: center;
+      background-color: #151515;
+      border-top: 2px solid #427284;
+      border-bottom: 2px solid #427284;
+      border-left: none;
+      border-right: none;
+      padding: 44px 40px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .topic-card:hover {
+      background-color: #1c1c1c;
+    }
+
+    .topic-card span.label {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    /* Footer */
+    .footer-rule {
+      margin: 0 64px;
+      border: none;
+      height: 1px;
+      background-color: #427284;
+    }
+
+    .footer {
+      padding: 32px 64px 48px;
+      font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      color: #F8F7F5;
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: #427284;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: #5a9ab5;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header {
+        padding: 32px 24px 24px;
+        gap: 16px;
+      }
+
+      .header img {
+        width: 52px;
+      }
+
+      .header h1 {
+        font-size: 1.3rem;
+        letter-spacing: 0.1em;
+      }
+
+      .footer-rule {
+        margin: 0 24px;
+      }
+
+      .content {
+        padding: 32px 24px;
+      }
+
+      .topic-card {
+        padding: 36px 28px;
+      }
+
+      .topic-card span.label {
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+      }
+
+      .footer {
+        padding: 24px 24px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <img src="logo-wht.png" alt="The Schenk Law Firm monogram">
+    <hr class="teal-rule-top">
+    <h1>The Schenk Law Library</h1>
+  </header>
+
+  <main class="content">
+    <a href="#" class="topic-card">
+      <span class="label">AI Psychosis</span>
+    </a>
+
+    <a href="#" class="topic-card">
+      <span class="label">Underage Gambling</span>
+    </a>
+
+    <a href="#" class="topic-card">
+      <span class="label">Asbestos Mesothelioma</span>
+    </a>
+  </main>
+
+  <hr class="footer-rule">
+
+  <footer class="footer">
+    Created and maintained by The Schenk Law Firm, LLP. <a href="https://schenklawfirm.com" target="_blank">schenklawfirm.com</a><br>
+    Please contact <a href="mailto:david@schenklawfirm.com">david@schenklawfirm.com</a> with any questions.
+  </footer>
+
+</body>
+</html>
