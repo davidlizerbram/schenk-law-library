@@ -32,7 +32,7 @@
 
     /* Header */
     .header {
-      padding: 56px 64px 36px;
+      padding: 56px 64px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -63,11 +63,11 @@
     /* Main content */
     .content {
       flex: 1;
-      padding: 48px 64px 64px;
+      padding: 54px 64px 72px;
       display: flex;
       flex-direction: column;
-      gap: 26px;
-      max-width: 880px;
+      gap: 30px;
+      max-width: 828px;
       margin: 0 auto;
       width: 100%;
     }
@@ -87,13 +87,13 @@
     .topic-card {
       display: block;
       text-align: center;
-      background-color: #131313;
-      border: 1.5px solid #427284;
+      background-color: #101010;
+      border: 1.5px solid rgba(66, 114, 132, 0.45);
       border-radius: 3px;
       padding: 50px 40px;
       text-decoration: none;
       color: #f0f0f0;
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       opacity: 0;
       animation: fadeUp 0.6s ease forwards;
     }
@@ -103,22 +103,23 @@
     .topic-card:nth-child(3) { animation-delay: 0.4s; }
 
     .topic-card:hover {
-      background-color: #1a1a1a;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 12px rgba(66, 114, 132, 0.08);
+      background-color: #181818;
+      border-color: rgba(66, 114, 132, 0.7);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55), 0 0 16px rgba(66, 114, 132, 0.1);
     }
 
     .topic-card span.label {
       font-family: Georgia, 'Times New Roman', serif;
       font-weight: 400;
-      font-size: 1.3rem;
-      letter-spacing: 0.28em;
+      font-size: 1.35rem;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
     }
 
     /* Footer */
     .footer-rule {
-      max-width: 880px;
+      max-width: 828px;
       margin: 0 auto;
       width: calc(100% - 128px);
       border: none;
@@ -127,14 +128,14 @@
     }
 
     .footer {
-      max-width: 880px;
+      max-width: 828px;
       margin: 0 auto;
       width: calc(100% - 128px);
-      padding: 28px 0 56px;
+      padding: 24px 0 56px;
       font-family: Calibri, Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #F8F7F5;
-      line-height: 2;
+      line-height: 1.75;
       text-align: center;
     }
 
@@ -170,8 +171,8 @@
       }
 
       .content {
-        padding: 32px 16px 48px;
-        gap: 22px;
+        padding: 36px 16px 52px;
+        gap: 24px;
       }
 
       .topic-card {
@@ -180,7 +181,7 @@
 
       .topic-card span.label {
         font-size: 1.05rem;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.16em;
       }
 
       .footer-rule {
